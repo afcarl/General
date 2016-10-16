@@ -1,0 +1,37 @@
+<html>
+    
+    <head>
+        <title>Starting d3 again</title>
+    </head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <body>
+        
+    <script>
+        var dataset;
+        d3.select("body").append("p").text("New paragraph!");
+        d3.csv("data.csv",function(error,data){
+            if (error){
+                console.log(error);
+            }
+            else{
+                console.log(data);
+            dataset = data;
+                generateVis();
+            }
+        });
+        
+        function generateVis(){
+            
+            d3.select("body").selectAll("p")
+                .data(dataset)
+                .enter()
+                .append("p")
+                .text(function(d) { return d["Food"]; });
+                            
+        }
+        
+    </script>
+    </body>
+    
+    
+</html>
