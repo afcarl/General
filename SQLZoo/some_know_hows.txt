@@ -1,0 +1,10 @@
+1. Case insensitive using collate
+Query: COLLATE SQL_Latin1_General_CP1_CS_AS
+Link: http://stackoverflow.com/questions/1831105/how-to-do-a-case-sensitive-search-in-where-clause-im-using-sql-server
+
+2. Datetime/ timestamp
+Link : http://stackoverflow.com/questions/409286/should-i-use-field-datetime-or-timestamp
+
+3. Substitute for ONE OR MORE CHARS
+Query: Like ("_%")
+Link: http://www.w3schools.com/sql/sql_wildcards.asp
