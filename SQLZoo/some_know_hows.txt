@@ -8,3 +8,28 @@ Link : http://stackoverflow.com/questions/409286/should-i-use-field-datetime-or-
 3. Substitute for ONE OR MORE CHARS
 Query: Like ("_%")
 Link: http://www.w3schools.com/sql/sql_wildcards.asp
+
+4. Replace works with column values also. here capital contains country name columns's value (Mexico City contains Mexico)
+Query: SELECT name,replace(capital,name,'') FROM world WHERE 
+capital LIKE concat(name,"_%");
+
+Link: http://sqlzoo.net/wiki/SELECT_names
+
+5.CASE WHEN condition1 THEN value1 
+       WHEN condition2 THEN value2  
+              ELSE def_value 
+	        END 
+
+Query: SELECT name, population
+      ,CASE WHEN population<1000000
+       THEN 'small'
+       WHEN population<10000000 
+	           THEN 'medium'
+                   ELSE 'large'
+                   END
+       	           FROM bbc
+
+6. Null is not equal to any other null or to anything else. In left join - you have to use rightTable_col is null to know which fields are not present in
+inner join
+
+Link: http://www.sql-join.com/sql-join-types
