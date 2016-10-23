@@ -33,3 +33,9 @@ Query: SELECT name, population
 inner join
 
 Link: http://www.sql-join.com/sql-join-types
+
+
+7. In many-to-many table design we need a junction table to hold the primary keys of two table we are trying to relate
+
+8. We can have a table with only foreign key and no primary key, in case of one to one table design 
+
