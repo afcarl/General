@@ -39,3 +39,6 @@ Link: http://www.sql-join.com/sql-join-types
 
 8. We can have a table with only foreign key and no primary key, in case of one to one table design 
 
+9. Union -gives distinct column elements of two tables. Union All - gives all column elements between two tables.
+   Intersect between two tables will give you values that occur in both the tables.
+   Intersect is not present in MySql - use "IN" or "Exists" clause (inefficient) with inner select query.
