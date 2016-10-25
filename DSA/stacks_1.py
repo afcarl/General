@@ -59,6 +59,7 @@ if __name__ == '__main__':
 	# s.pop()
 
 	# Reverse a string
+	# WAY BETTER TO DO - list(reversed(input_string))
 
 	input_string = "priya"
 	s = stacks(len(input_string))
