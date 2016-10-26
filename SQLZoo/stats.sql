@@ -13,3 +13,6 @@ select count(*),sum(w1.population),w.name,w.population
 from world w join world w1 where w.population<=w1.population 
 group by w.name,w.population 
 order by count(*);
+
+-- percentage of population by world sum
+select name,population, population/(select sum(w.population) from world w) from world;
