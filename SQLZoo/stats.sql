@@ -16,3 +16,8 @@ order by count(*);
 
 -- percentage of population by world sum
 select name,population, population/(select sum(w.population) from world w) from world;
+
+-- cumulative percentage
+select w.name,sum(w1.population)/(select sum(w3.population) from world w3),w.population 
+from world w join world w1 
+where w.population <= w1.population group by w.name,w.population  order by w.population desc;
