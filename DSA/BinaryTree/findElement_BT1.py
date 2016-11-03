@@ -2,7 +2,7 @@
 
 import sys
 
-def findElement(l,a):
+def findElement(user_list,a):
 	"""
 	Binary tree search on a sorted array. Complexity is O(log(n))
 	Inputs the sorted list, and the element to be found
@@ -11,18 +11,22 @@ def findElement(l,a):
 	
 	"""
 	start = 0 # intialize the start pointer for the sorted list to 0
-	end = len(l) - 1 # initialize the end pointed for the sorted list to the last index
+	end = len(user_list) - 1 # initialize the end pointed for the sorted list to the last index
 
-	while(start<=end):
+	while(start<=end): # only if start is before the end pointer
 		mid = (start+end)/2
 
-		if l[mid]==a:
-			return mid
+		if user_list[mid]==a:
+			return mid # return the element if it is equal to the middle element of the considered part of the user_list
 
-		elif l[mid]<a:
+		elif user_list[mid]<a: 
+			# move in the upper half of the user list to check for 
+			# element and remove the lower half from further consideration by changing the start pointer value
 			start = mid+1
 
-		elif l[mid]>a:
+		elif user_list[mid]>a:
+			# move in the lower half of the user list to check for 
+			# element and remove the upper half from further consideration by changing the end pointer value
 			end = mid - 1
 
 
@@ -35,13 +39,10 @@ def findElement(l,a):
 
 if __name__ == '__main__':
 
-	l = map(lambda x: int(x),sys.argv[1:]) # input the elements for the list as arguments
-	l = sorted(l) # sort the array for binary search
-	print l
-	to_find = raw_input("Please enter the element you want to find: \n") # input the element you want to find in the list
-	to_find = int(to_find)
-
-	print findElement(l,to_find)
+	user_list = sorted(map(lambda x: int(x),sys.argv[1:])) # input the elements for the list as commandline arguments and sort it
+	print user_list
+	to_find = int(raw_input("Please enter the element you want to find: \n")) # input the element you want to find in the list
+	print findElement(user_list,to_find)
 
 
 
