@@ -5,6 +5,14 @@ import sys
 
 
 def quick_sort(A):
+	'''
+	implement quick sort algorithm
+	- Divide and conquer
+	- Recursive
+	- Not stable
+	- Avg Case: O(n * log n)
+	- Worst case: O(n ** 2)
+	'''
 	quick_sort_helper(A,0,len(A)-1)
 
 
