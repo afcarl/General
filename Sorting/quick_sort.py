@@ -1,4 +1,5 @@
 #!usr/bin/env/python2
+# source: http://interactivepython.org/courselib/static/pythonds/SortSearch/TheQuickSort.html
 import os
 import sys
 
