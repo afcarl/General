@@ -7,13 +7,18 @@ def insertion_sort(seq):
 	Implement insertion sorting, O(n**2)
 	'''
 	n = len(seq)
-	for i in range(n-1):
-		if seq[i]>seq[i+1]:
-			seq[i],seq[i+1] = seq[i+1],seq[i]
-		for j in range(i):
-			for k in range(i):
-				if seq[k]>seq[k+1]:
-					seq[k],seq[k+1] = seq[k+1],seq[k]
+	for i in range(1,n):
+		j = i
+		k = i-1
+		while j>0 and k>=0:
+			if seq[j]<seq[k]:
+				seq[k],seq[j] = seq[j],seq[k]
+				j = k
+				k = k-1
+			else:
+				break
+
+				j = j-1
 
 	print seq
 
